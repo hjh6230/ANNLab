@@ -6,4 +6,4 @@ end
 
 targets=patterns;
 
-X=[patterns;ones(1,8)];
+X=patterns;

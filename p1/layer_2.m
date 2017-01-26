@@ -1,5 +1,5 @@
 alpha=0.9;
-hidesize=20;
+hidesize=3;
 eta=0.001;
 [insize, ndata] = size(patterns);
 [outsize, ndata] = size(targets);
@@ -39,4 +39,38 @@ while (Loop>=epoch)
     
 end
 
+
+plot(1:1:Loop,error)
+
+% [xa,xb]=meshgrid(-3:0.02:3,-3:0.02:3);
+% gsize=size(xa,1);
+% in1=reshape(xa,1,gsize^2);
+% in2=reshape(xb,1,gsize^2);
+% input=[in1;in2];
+% hin = w * [input ; ones(1,gsize^2)];
+%     hout = [2 ./ (1+exp(-hin)) - 1 ; ones(1,gsize^2)];
+%     oin = v * hout;
+%     output = 2 ./ (1+exp(-oin)) - 1;
+% output=reshape(output,gsize,gsize);
+% 
+% hold on
+% 
+% 
+% for i=1:1:gsize
+%     for j=1:1:gsize
+%         if (output(i,j)>0) 
+%             plot(xa(i,j),xb(i,j),'*g');
+%         end
+%     end
+% end
+% 
+% 
+% for i=1:1:ndata
+%     if(targets(i)==1)
+%         plot(patterns(1,i),patterns(2,i),'ro');
+%     else
+%         plot(patterns(1,i),patterns(2,i),'kx');
+%     end
+%         
+% end
 

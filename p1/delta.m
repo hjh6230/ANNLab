@@ -1,4 +1,4 @@
-Loop=20;
+Loop=200;
 eta=0.001;
 [insize, ndata] = size(patterns);
 [outsize, ndata] = size(targets);
@@ -26,7 +26,7 @@ patterns(2, find(targets<0)), '+', ...
 [p(1), p(1)]*k + [-p(2), p(2)]/l, ...
 [p(2), p(2)]*k + [p(1), -p(1)]/l, '-');
 drawnow;
-pause(0.2);
+pause(0.02);
 
 
 end

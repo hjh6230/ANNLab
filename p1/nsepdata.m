@@ -18,3 +18,6 @@ targets = targets(:, permute);
 % patterns(2, find(targets<0)), '+');
 
 X=[patterns;ones(1,200)];
+
+
+

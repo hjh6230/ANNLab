@@ -4,8 +4,8 @@ eta=0.001;
 [insize, ndata] = size(patterns);
 [outsize, ndata] = size(targets);
 
-w=randn(hidesize,insize+1);
-v=randn(outsize,hidesize+1);
+w=randn(hidesize,insize);
+v=randn(outsize,hidesize);
 
 Loop=10000;
 
@@ -19,8 +19,8 @@ stop=0;
 while (stop~=1)
     
 
-    hin = w * [patterns ; ones(1,ndata)];
-    hout = [2 ./ (1+exp(-hin)) - 1 ; ones(1,ndata)];
+    hin = w * patterns;
+    hout = 2 ./ (1+exp(-hin)) - 1;
     oin = v * hout;
     out = 2 ./ (1+exp(-oin)) - 1;
 

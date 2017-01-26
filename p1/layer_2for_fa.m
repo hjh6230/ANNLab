@@ -1,11 +1,11 @@
 alpha=0.9;
-hidesize=20;
+hidesize=10;
 eta=0.001;
 [insize, ndata] = size(patterns);
 [outsize, ndata] = size(targets);
 
-w=randn(hidesize,insize+1);
-v=randn(outsize,hidesize+1);
+w=ww;
+v=vv;
 
 Loop=1000;
 
